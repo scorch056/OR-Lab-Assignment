@@ -1,0 +1,7 @@
+kmeans(jails,centers = 4)
+plot(jails)
+install.packages("factoextra")
+library(factoextra)
+fviz_nbclust(jails,kmeans,method = "silhouette")
+result1<-kmeans(jails,centers = 2)
+fviz_cluster(result1,data=jails,geom="point")

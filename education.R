@@ -1,0 +1,7 @@
+kmeans(education,centers = 4)
+plot(education)
+install.packages("factoextra")
+library(factoextra)
+fviz_nbclust(education,kmeans,method = "silhouette")
+result<-kmeans(education,centers = 2)
+fviz_cluster(result,data=education,geom="point")
